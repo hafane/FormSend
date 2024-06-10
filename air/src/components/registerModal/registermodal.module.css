@@ -1,0 +1,65 @@
+.regModal {
+    @apply w-screen;
+}
+
+.regModal h1 {
+    @apply text-center text-4xl;
+    animation: fade .4s ease-in-out;
+}
+
+.modal {
+    @apply bg-white w-800 absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 p-4 rounded-md shadow-xl;
+    animation: fade 1s linear;
+}
+
+.modal h1 {
+    @apply text-center text-sky-200 text-4xl font-bold border-2 border-dashed;
+}
+
+.modal form {
+    @apply grid grid-cols-2 grid-rows-1 gap-8;
+}
+
+.modal form .fio, .modal form .info {
+    @apply flex flex-col;
+}
+
+.modal form .fio input, .modal form .info input {
+    @apply bg-gray-200/20 outline-none p-2.5 mt-2.5 border-b-2 border-blue-400/50 text-slate-400 shadow-md;
+}
+
+.modal form .fio label, .modal form .info label {
+    @apply text-slate-600 font-bold mt-2.5 text-lg;
+}
+
+.modal form .fio span, .modal form .info span {
+    @apply text-slate-600;
+}
+
+.modal form .fio select {
+    @apply w-1/2 mt-5 mb-5 bg-gray-200/20 text-slate-400 p-1.5 border-b-2 border-blue-400/50 outline-none;
+}
+
+.modal .btns {
+    @apply w-full flex justify-between flex-row-reverse;
+}
+
+.modal .btns button {
+    @apply p-1.5 rounded border-2 border-gray-200/50 cursor-pointer;
+}
+
+.modal .btns button[type='submit'] {
+    @apply bg-sky-300/60 text-white hover:text-gray-100;
+}
+
+.modal .btns button[type='reset'] {
+    @apply bg-red-300/60 text-white hover:text-gray-100;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
